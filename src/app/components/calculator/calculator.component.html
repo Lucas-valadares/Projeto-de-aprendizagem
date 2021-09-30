@@ -1,1 +1,154 @@
-<p>calculator works!</p>
+<mat-card class="calculator-content mat-elevation-z5">
+  <div class="calculator mat-elevation-z6">
+  
+  <mat-card-title class="title">
+    Calculadora
+  </mat-card-title>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <button mat-raised-button color="warn"
+        type="button" 
+        (click)="limpar()"
+        class="btn">C
+      </button>
+    
+      <input 
+        type="text" 
+        class="display-result"
+        id="display" 
+        name="display" 
+        [value]="display"
+        readonly>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('7')"
+        id="btn7">7
+      </button>
+
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('8')"
+        id="btn8">8
+      </button>
+
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('9')"
+        id="btn9">9
+      </button>
+
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn" 
+        (click)="definirOperacao('/')"
+        id="btnDivisao">/
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('4')"
+        id="btn4">4
+      </button>
+
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('5')"
+        id="btn5">5
+      </button>
+ 
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('6')"
+        id="btn6">6
+      </button>
+ 
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn"  
+        (click)="definirOperacao('*')"
+        id="btnMIltiplicacao">*
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('1')"
+        id="btn1">1
+      </button>
+
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('2')"
+        id="btn2">2
+      </button>
+   
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('3')"
+        id="btn3">3
+      </button>
+  
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn" 
+        (click)="definirOperacao('-')"
+        id="btnSubtracao">-
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <button mat-raised-button color="primary"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('0')"
+        id="btn0">0
+      </button>
+
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn" 
+        (click)="adicionarNumero('.')"
+        id="btnDecimal">.
+      </button>
+  
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn" 
+        (click)="calcular()"
+        id="btnCalcular">=
+      </button>
+   
+      <button mat-raised-button style="background-color: #8E00FF; color: white;"
+        type="button" 
+        class="btn" 
+        (click)="definirOperacao('+')"
+        id="btnSoma">+
+      </button>
+    </div>
+  </div>
+</div>
+</mat-card>
