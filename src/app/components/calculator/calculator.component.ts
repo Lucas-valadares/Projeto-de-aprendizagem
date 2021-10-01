@@ -10,7 +10,7 @@ export class CalculatorComponent implements OnInit {
   private numero1: any;
   private numero2: any;
   private resultado: any;
-  private operacao: any;
+  private operacao: any | string;
 
   constructor(private calculatorService: CalculatorService) { }
 
@@ -28,7 +28,7 @@ export class CalculatorComponent implements OnInit {
   adicionarNumero(numero: string): void {
   	if (this.operacao === null) {
   	  this.numero1 = this.concatenarNumero(this.numero1, numero);
-  	} else {
+  	} if(this.operacao !== null && this.resultado === null) {
   	  this.numero2 = this.concatenarNumero(this.numero2, numero);
   	}
   }
@@ -60,22 +60,22 @@ export class CalculatorComponent implements OnInit {
 
   definirOperacao(operacao: string): void {
 // apenas define a operação caso não exista uma
+
+	this.operacao = operacao;
   	if (this.operacao === null) {
-      this.operacao = operacao;
+		this.operacao = operacao;
       return;
   	}
 
-// caso operação definida e número 2 selecionado, efetua o cálculo da operação 
   	if (this.numero2 !== null) {
-  		this.resultado = this.calculatorService.calcular(
-  			parseFloat(this.numero1), 
-  			parseFloat(this.numero2), 
-  			this.operacao);
+
   		this.operacao = operacao;
   		this.numero1 = this.resultado.toString();
   		this.numero2 = null;
   		this.resultado = null;
+
   	}
+	  console.log(this.operacao);
   }
 
 
@@ -84,24 +84,35 @@ export class CalculatorComponent implements OnInit {
   	if (this.numero2 === null) {
   		return;
   	}
-
+	
   	this.resultado = this.calculatorService.calcular(
   		parseFloat(this.numero1), 
   		parseFloat(this.numero2), 
   		this.operacao);
+	this.operacao = this.operacao
   }
 
  // Retorna o valor a ser exibido na tela da calculadora.
-  get display(): string {
-  	if (this.resultado !== null) {
-  		return this.resultado.toString();
-  	}
-  	if (this.numero2 !== null) {
-  		return this.numero2;
-  	}
-  	return this.numero1;
+  get displayOperacao(): string {
+	if (this.operacao !== null && this.numero2 === null){
+		return this.numero1 + "  " + this.operacao;
+	}
+	
+	if (this.operacao !== null && this.numero2 !== null){
+		return this.numero1 + " " + this.operacao + " " + this.numero2 + " =";
+	}
+	 return " "
   }
+  get display(): string {
 
+	if (this.resultado !== null) {
+		return this.resultado.toString();
+	}
+	if (this.numero2 !== null) {
+		return this.numero2;
+	}
+	return this.numero1 
+  }
 }
 
 export class CalculatorService {
@@ -109,7 +120,7 @@ export class CalculatorService {
   static readonly SOMA: string = '+';
   static readonly SUBTRACAO: string = '-';
   static readonly DIVISAO: string = '/';
-  static readonly MULTIPLICACAO: string = '*';
+  static readonly MULTIPLICACAO: string = 'x';
 
   constructor() { }
 

@@ -42,7 +42,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
-import { CalculatorComponent, CalculatorService } from './components/calculator/calculator.component'
+import { CalculatorComponent, CalculatorService } from './components/calculator/calculator.component';
+import { EditTextComponent } from './components/edit-text/edit-text.component'
 
 const angularMaterialModules = [
   MatFormFieldModule,
@@ -90,6 +91,7 @@ const angularMaterialModules = [
     MenuComponent,
     HomeComponent,
     CalculatorComponent,
+    EditTextComponent,
   ],
   imports: [
     BrowserModule,

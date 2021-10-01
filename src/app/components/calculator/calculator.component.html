@@ -3,6 +3,14 @@
   
   <mat-card-title class="title">
     Calculadora
+    <input 
+    type="text" 
+    class="display-operacoa"
+    id="displayOperacao" 
+    name="displayOperacao" 
+    [value]="displayOperacao"
+    readonly>
+
   </mat-card-title>
 
   <div class="row">
@@ -13,6 +21,7 @@
         class="btn">C
       </button>
     
+
       <input 
         type="text" 
         class="display-result"
@@ -81,8 +90,8 @@
       <button mat-raised-button style="background-color: #8E00FF; color: white;"
         type="button" 
         class="btn"  
-        (click)="definirOperacao('*')"
-        id="btnMIltiplicacao">*
+        (click)="definirOperacao('x')"
+        id="btnMIltiplicacao">X
       </button>
     </div>
   </div>

@@ -1,5 +1,5 @@
 .calculator-content{
-    width: 70vw;
+    width: 72vw;
     height: 70vh;
     background: #6C7A89;
     display: flex;
@@ -15,7 +15,7 @@
 }
 .calculator .title{
     margin-top: 10px;
-    margin-left: 8rem;
+    margin-left: 1rem;
     font-size: 30px;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,15 @@
     font-size: 30px;
     margin-top: 3px;
 	margin-left: 40px;
+    vertical-align: middle;
+}
+.calculator .display-operacoa{
+    height: 20px;
+    width: 185px;
+    left: 10rem;
+    font-size: 21px;
+    margin-top: 3px;
+	margin-left: 1rem;
     vertical-align: middle;
 }
 .calculator .btn {
