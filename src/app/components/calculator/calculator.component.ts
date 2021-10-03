@@ -121,6 +121,7 @@ export class CalculatorService {
   static readonly SUBTRACAO: string = '-';
   static readonly DIVISAO: string = '/';
   static readonly MULTIPLICACAO: string = 'x';
+  static readonly PORCENTAGEM: string = '%';
 
   constructor() { }
 
@@ -140,6 +141,9 @@ export class CalculatorService {
   	  case CalculatorService.MULTIPLICACAO:
   	    resultado = num1 * num2;
   		break;
+	//   case CalculatorService.PORCENTAGEM:
+	// 	resultado = (num1 / 100) * num2;
+	//   break;
   	  default:
   	    resultado = 0;
   	}

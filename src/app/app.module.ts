@@ -44,6 +44,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { CalculatorComponent, CalculatorService } from './components/calculator/calculator.component';
 import { EditTextComponent } from './components/edit-text/edit-text.component'
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HttpClientModule} from '@angular/common/http';
+
 
 const angularMaterialModules = [
   MatFormFieldModule,
@@ -99,6 +102,8 @@ const angularMaterialModules = [
     BrowserAnimationsModule,
     MatDialogModule,
     angularMaterialModules,
+    AngularEditorModule,
+    HttpClientModule
   ],
   exports:[
     CalculatorComponent
