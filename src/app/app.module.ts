@@ -46,6 +46,7 @@ import { CalculatorComponent, CalculatorService } from './components/calculator/
 import { EditTextComponent } from './components/edit-text/edit-text.component'
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule} from '@angular/common/http';
+import { JogoDaVelhaService, TicTacToeComponent } from './components/tic-tac-toe/tic-tac-toe.component';
 
 
 const angularMaterialModules = [
@@ -95,6 +96,7 @@ const angularMaterialModules = [
     HomeComponent,
     CalculatorComponent,
     EditTextComponent,
+    TicTacToeComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,7 +110,7 @@ const angularMaterialModules = [
   exports:[
     CalculatorComponent
   ],
-  providers: [CalculatorService],
+  providers: [CalculatorService, JogoDaVelhaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

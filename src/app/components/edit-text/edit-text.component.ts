@@ -11,56 +11,11 @@ import { from } from 'rxjs';
 })
 export class EditTextComponent  implements OnInit {
 
-//   editorConfig: AngularEditorConfig  ={
-//     editable: true,
-//     spellcheck: true,
-//     height: 'auto',
-//     minHeight: '68vh',
-//     maxHeight: '68vh',
-//     width: 'auto',
-//     minWidth: '0',
-//     translate: 'yes',
-//     enableToolbar: true,
-//     showToolbar: true,
-//     placeholder: 'Escreva Aqui...',
-//     defaultParagraphSeparator: '',
-//     defaultFontName: 'font',
-//     defaultFontSize: '5',
-//     fonts: [
-//       {class: 'arial', name: 'Arial'},
-//       {class: 'times-new-roman', name: 'Times New Roman'},
-//       {class: 'calibri', name: 'Calibri'},
-//       {class: 'comic-sans-ms', name: 'Comic Sans MS'},
-//       {class: 'cursive', name: 'Cursive'},
-//       {class: 'fantasy',name: 'Fantasy'},
-//     ],
-
-//     uploadUrl: 'v1/image',
-
-//     // o que não será colocado
-//     toolbarHiddenButtons: [ 
-//   [
-//     'customClasses',
-//     'insertImage', //colocar imagem
-//     'insertVideo',
-//     'insertHorizontalRule',
-//     'toggleEditorMode'
-//   ]
-// ]
-// };
-
-// downloadPdf() {
-// console.log(this.editorConfig)
-// }
-
 title = 'app';
-
-form: FormGroup | undefined;
-
+form: FormGroup | any;
 htmlContent1 = "";
 
-
-config1: AngularEditorConfig = {
+editorConfig: AngularEditorConfig = {
   editable: true,
     spellcheck: true,
     height: 'auto',
@@ -89,21 +44,20 @@ config1: AngularEditorConfig = {
       { name: 'redText', class: 'redText' },
       { name: 'titleText', class: 'titleText', tag: 'h1'},
     ],
-      
-  toolbarHiddenButtons: [
-    [
-    'customClasses',
-    'insertVideo',
-    'removeFormat',
-    'toggleEditorMode'
+    toolbarHiddenButtons: [
+      [
+      'customClasses',
+      'insertVideo',
+      'removeFormat',
+      'toggleEditorMode'
+      ]
     ]
-  ]
 };
 
-
-downloadPdf() {
-console.log(this.htmlContent1)
-}
+// futuramente quem sabe baixar em PDF o texto editado 
+// downloadPdf() {
+// console.log(this.htmlContent1)
+// }
 constructor(private formBuilder: FormBuilder) {}
 
 ngOnInit() {

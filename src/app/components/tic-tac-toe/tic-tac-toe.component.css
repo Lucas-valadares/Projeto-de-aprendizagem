@@ -1,0 +1,84 @@
+.tic-tac-toe-content {
+    width: 82vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tic-tac-toe {
+    margin-top: 30px;
+    width: 400px;
+    height: 500px;
+}
+
+.tic-tac-toe .botao {
+    margin-left: 8.5rem;
+	font-size: 30px;
+	background-color: #9A2DFA;
+	padding: 20px;
+}
+
+.tic-tac-toe-again .botao {
+    margin-left: 0.1rem;
+	font-size: 20px;
+	background-color: #9A2DFA;
+	padding: 25px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-tic-tac-toe{
+    margin-left: 6.5rem;
+    font-size: 30px;
+}
+
+.title{
+    margin-left: 1.5rem;
+    font-size: 30px;
+}
+
+.principal {
+	margin-top: 100px;
+}
+
+button:hover, button:active {
+    color: whitesmoke;
+}
+
+.cima{
+    margin-top: 70px;
+}
+
+ul li {
+	list-style: none;
+	width: 110px;
+	height: 110px;
+	float: left;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+
+.kz-border-bottom {
+	border-bottom: 8px solid #333;
+}
+
+.kz-border-right {
+	border-right: 8px solid #333;
+}
+
+.kz-img-x {
+	background-image: url('/assets/images/x.png');
+}
+
+.kz-img-o {
+	background-image: url('/assets/images/o.png');
+}
+
+.kz-cor-vitoria {
+	 background-color: lightgreen;
+}

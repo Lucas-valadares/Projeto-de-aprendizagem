@@ -1,17 +1,8 @@
-<!-- <mat-card class="edit-text mat-elevation-z6">
-    <angular-editor class="edit-general" formControlName="htmlContent" 
-    [config]="editorConfig"></angular-editor>
-    <button (click)="downloadPdf()">Download PDF</button>
-</mat-card> -->
 <mat-card class="edit-text mat-elevation-z6">
-
-<div class="container">
-    <angular-editor id="editor1" formControlName="htmlContent"  
-    [config]="config1"></angular-editor>
-    <p class="html">
-     
-    </p>
-    <button (click)="downloadPdf()">Download PDF</button>
-  </div>
+    <angular-editor class="edit-general" id="editor1" 
+    formControlName="htmlContent" [config]="editorConfig"></angular-editor>
+    <!-- <p class="html">
+      <button (click)="downloadPdf()">Download PDF</button>
+    </p> -->
 </mat-card>
 
