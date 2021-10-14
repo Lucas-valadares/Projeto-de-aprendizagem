@@ -4,22 +4,26 @@ import { HomeComponent } from './components/home/home.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { EditTextComponent } from './components/edit-text/edit-text.component';
 import { TicTacToeComponent } from './components/tic-tac-toe/tic-tac-toe.component';
+import { AuthGuard } from './guards/auth.guard.service';
 
 const routes: Routes = [{
   path:"",
-  component: HomeComponent
+  component: HomeComponent,
 },
 {
   path: "calculator",
-  component: CalculatorComponent
+  component: CalculatorComponent,
+  canActivate: [AuthGuard]
 },
 {
   path:"editText",
-  component: EditTextComponent
+  component: EditTextComponent,
+  canActivate: [AuthGuard]
 },
 {
   path:"ticTacToe",
-  component: TicTacToeComponent
+  component: TicTacToeComponent,
+  canActivate: [AuthGuard]
 }];
 
 @NgModule({
