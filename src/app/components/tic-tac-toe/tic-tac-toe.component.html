@@ -12,8 +12,23 @@
          (click)="iniciarJogo()">
            Iniciar
         </button>
+        <button mat-stroked-button
+            class="botao-sobre"
+          (click)="iniciarJogo()">
+            Sobre
+        </button>
+
     </div>
+
+  <!-- tabuleiro funciona da seguinte forma 
+      linha | colunas 
+          0 |  0   1   2
+          1 |  0   1   2
+          2 |  0   1   2
   
+    para saber a posição vc precisa passar a linha e a coluna
+
+  -->
     <!-- Jogo -->
     <div *ngIf="showTabuleiro">
       <ul>
@@ -79,6 +94,13 @@
         </div>
 
       </ul>
+
+      <button mat-raised-button
+      class="botao-menu" 
+      (click)="menuPrincipal()">
+      Menu principal
+      </button>
+
     </div>
     </div>
 
@@ -96,6 +118,5 @@
      </button>
     </div>
     </div>
-    
 </div>
-  
+    

@@ -13,11 +13,27 @@
     height: 500px;
 }
 
+.botao-menu{
+    margin-top: 10px;
+    margin-left: 9.6rem;
+	font-size: 15px;
+	background-color: #9A2DFA;
+	padding: 10px;
+}
+
 .tic-tac-toe .botao {
     margin-left: 8.5rem;
 	font-size: 30px;
 	background-color: #9A2DFA;
 	padding: 20px;
+}
+
+.tic-tac-toe .botao-sobre {
+    margin-top: 50px;
+    margin-left: 8.5rem;
+	font-size: 30px;
+	background-color: #9A2DFA;
+	padding: 22px;
 }
 
 .tic-tac-toe-again .botao {
@@ -49,7 +65,7 @@ button:hover, button:active {
 }
 
 .cima{
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 ul li {

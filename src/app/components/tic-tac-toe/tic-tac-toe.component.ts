@@ -64,6 +64,10 @@ export class TicTacToeComponent implements OnInit {
   	this.jogoDaVelhaService.novoJogo();
   }
 
+  menuPrincipal(): void{
+    this.jogoDaVelhaService.menuPrincipal();
+  }
+
 }
 
 
@@ -134,8 +138,7 @@ export class JogoDaVelhaService {
 /** Realiza uma jogada dado as coordenadas do tabuleiro. */
   jogar(posX: number, posY: number): void {
     // jogada inválida
-    if (this.tabuleiro[posX][posY] !== this.VAZIO || 
-      this.vitoria) {
+    if (this.tabuleiro[posX][posY] !== this.VAZIO || this.vitoria) {
       return;
     }
 
@@ -281,4 +284,9 @@ export class JogoDaVelhaService {
     this._showTabuleiro = true;
   }
 
+  menuPrincipal(): void {
+    this._showFinal = false;
+    this._showInicio = true;
+    this._showTabuleiro = false;
+  }
 }
