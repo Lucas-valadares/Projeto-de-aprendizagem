@@ -48,6 +48,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule} from '@angular/common/http';
 import { JogoDaVelhaService, TicTacToeComponent } from './components/tic-tac-toe/tic-tac-toe.component';
 import { AuthGuard } from './guards/auth.guard.service';
+import { LoginComponent } from './components/login/login.component';
 
 
 const angularMaterialModules = [
@@ -98,6 +99,7 @@ const angularMaterialModules = [
     CalculatorComponent,
     EditTextComponent,
     TicTacToeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
