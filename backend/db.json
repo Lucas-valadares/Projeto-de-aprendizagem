@@ -1,0 +1,17 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "Caneta Bic",
+            "price": 5.20
+        },
+        {
+            "id": 2,
+            "name": "Lapis Para Colorir",
+            "price": 19.90
+        },
+        {
+            "id": 3,
+            "name": "Mochila",
+            "price": 57.20
+        }]}
