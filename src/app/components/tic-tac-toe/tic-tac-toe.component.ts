@@ -59,17 +59,11 @@ export class TicTacToeComponent implements OnInit {
   	return this.jogoDaVelhaService.jogador;
   }
 
-  /** Inicia um novo jogo. */
-  // novoJogo(): void {
-  // 	this.jogoDaVelhaService.novoJogo();
-  // }
-
   menuPrincipal(): void{
     this.jogoDaVelhaService.menuPrincipal();
   }
 
 }
-
 
 @Injectable()
 export class JogoDaVelhaService {
@@ -277,14 +271,6 @@ export class JogoDaVelhaService {
 
     return exibirVitoria;
   }
-
-/** Inicializa um novo jogo, assim como exibe o tabuleiro. */
-  // novoJogo(): void {
-  //   this.inicializar();
-  //   this._showFinal = false;
-  //   this._showInicio = false;
-  //   this._showTabuleiro = true;
-  // }
 
   menuPrincipal(): void {
     this._showFinal = false;
